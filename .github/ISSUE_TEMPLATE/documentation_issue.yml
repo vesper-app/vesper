@@ -1,0 +1,18 @@
+name: "📚 Documentation Issue"
+description: "Report an issue or suggest an improvement for the Vesper.sh website or other documentation."
+title: "[DOCS]: "
+labels: ["documentation"]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: "URL of the Page"
+      description: "If this issue is about a specific page on the website, please provide the URL."
+      placeholder: "https://www.vesper.sh/docs/getting-started.html"
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: "Description of the Issue"
+      description: "Please provide a clear and concise description of the typo, unclear section, or suggested improvement."
+    validations:
+      required: true
