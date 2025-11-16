@@ -1,0 +1,70 @@
+name: "📣 Communication / Marketing Task"
+description: "Propose or track a task related to blog posts, social media, announcements, or community engagement."
+title: "[MKTG]: "
+labels: ["marketing"]
+body:
+  - type: dropdown
+    id: task-type
+    attributes:
+      label: "Type of Task"
+      description: "What is the primary nature of this task?"
+      options:
+        - "Blog Post"
+        - "Community Announcement"
+        - "Product Launch Event"
+        - "Documentation Update"
+        - "Community Engagement"
+    validations:
+      required: true
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: "Objective"
+      description: "What is the strategic goal of this task? What are we trying to achieve?"
+      placeholder: "e.g., To announce the release of v0.2.0 and highlight the new Command Palette feature."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: platforms
+    attributes:
+      label: "Key Platforms"
+      description: "Where will this task be executed or have an impact?"
+      options:
+        - label: "Vesper.sh Website / Blog"
+        - label: "GitHub Repository (README, Releases)"
+        - label: "Hacker News / Lobste.rs"
+        - label: "Lemmy"
+        - label: "Reddit"
+        - label: "Discord"
+        - label: "Other"
+
+  - type: textarea
+    id: definition-of-done
+    attributes:
+      label: "Acceptance Criteria / Definition of Done"
+      description: "Provide a clear, actionable checklist of what needs to be completed for this task to be considered done."
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "---"
+
+  - type: markdown
+    attributes:
+      value: "### Rationale / Why is this important?"
+  
+  - type: textarea
+    id: rationale
+    attributes:
+      label: "Task Rationale"
+      description: "Explain how this task supports the project's goals. Which user personas does it target? How does it build our brand?"
+      placeholder: "e.g., This blog post will serve as the primary SEO asset to rank for 'tmux alternative' and will directly appeal to our 'Alex' persona by showcasing a modern UX."
+    validations:
+      required: true
