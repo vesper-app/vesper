@@ -1,0 +1,44 @@
+name: "🐛 Bug Report"
+description: "Report a bug or unexpected behavior in the Vesper application."
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: "Bug Description"
+      description: "A clear and concise description of what the bug is."
+    validations:
+      required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: "Steps to Reproduce"
+      description: "Please provide detailed steps to reproduce the behavior."
+      placeholder: |
+        1. Open Vesper with the command `...`
+        2. Press the keybinding `...`
+        3. See the error `...`
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: "Expected Behavior"
+      description: "A clear and concise description of what you expected to happen."
+    validations:
+      required: true
+  - type: input
+    id: vesper-version
+    attributes:
+      label: "Vesper Version"
+      description: "What version of Vesper are you running? (e.g., `vesper --version`)"
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: "Operating System"
+      description: "e.g., Ubuntu 22.04, macOS Sonoma 14.1"
+    validations:
+      required: true
