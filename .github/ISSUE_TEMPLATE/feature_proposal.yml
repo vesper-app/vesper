@@ -1,0 +1,35 @@
+name: "🚀 Feature Proposal"
+description: "Suggest a new feature or enhancement for the Vesper application."
+title: "[FEAT]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "Feature Description"
+      description: "A clear and concise description of the feature and the user problem it solves. What should happen? Why is this needed?"
+      placeholder: "As a user, I want to be able to [...] so that I can [...]."
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: "Acceptance Criteria"
+      description: "Define the specific requirements for this feature to be considered complete. Include both 'Happy Path' and 'Unhappy Path' scenarios."
+      value: |
+        ### Happy Path:
+        1. 
+        2. 
+
+        ### Unhappy Path Scenarios:
+        1. 
+        2. 
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: "Rationale / Why should we build this?"
+      description: "Explain why this feature is valuable. How does it align with the project's vision? Which user personas does it serve (e.g., Cameron the Veteran, Alex the Modern Dev, Jamie the Beginner Dev)?"
+    validations:
+      required: true
