@@ -1,19 +1,25 @@
 <div align="center">
-
-![Vesper Logo](https://www.vesper.sh/images/logo.svg)
-
-# Vesper
-### Your persistent, predictable, terminal workspace.
-
-[![Build Status](https://img.shields.io/github/actions/workflow/status/vesper-app/vesper/build.yml?branch=main&style=for-the-badge)](https://github.com/vesper-app/vesper/actions)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Latest Release](https://img.shields.io/github/v/release/vesper-app/vesper?style=for-the-badge)](https://github.com/vesper-app/vesper/releases)
-[![Discord](https://img.shields.io/discord/1439595831899717774?style=for-the-badge&logo=discord&label=community&color=C792EA)](https://discord.gg/DFEgkv3MkU)
-
-Tired of fighting your terminal multiplexer? Vesper is a modern, standalone alternative to Tmux that works out of the box, with a superior remote workflow and deep customization via Lua.
-
-**[Visit Vesper.sh](https://www.vesper.sh) for a full tour, documentation, and tutorials.**
-
+<table>
+  <tr>
+    <td>
+      <p align="center">
+        <img src="./icon-512x512.svg" alt="Vesper Icon" width="100">
+      </p>
+      <h1 align="center">Welcome to the Vesper Project</h1>
+      <p align="center">
+        Your persistent, predictable, terminal workspace.
+        <br />
+        <a href="https://www.vesper.sh"><strong>Visit the Website »</strong></a>
+      </p>
+      <p align="center">
+        <!--a href="https://github.com/vesper-app/vesper/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/vesper-app/vesper/ci.yml?branch=main&style=for-the-badge" alt="Build Status"></a>
+        <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/github/license/vesper-app/vesper?style=for-the-badge" alt="License: MIT"></a>
+        <a href="https://github.com/vesper-app/vesper/releases"><img src="https://img.shields.io/github/v/release/vesper-app/vesper?style=for-the-badge" alt="Latest Release"></a-->
+        <a href="https://discord.gg/DFEgkv3MkU"><img src="https://img.shields.io/badge/Community-Join_the_Conversation-C792EA?style=for-the-badge&logo=discord" alt="Discord Community"></a>
+      </p>
+    </td>
+  </tr>
+</table>
 </div>
 
 ---
