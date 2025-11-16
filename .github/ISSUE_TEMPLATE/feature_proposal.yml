@@ -7,7 +7,7 @@ body:
     id: description
     attributes:
       label: "Feature Description"
-      description: "A clear and concise description of the feature and the user problem it solves. What should happen? Why is this needed?"
+      description: "A clear and concise description of the feature and the user problem it solves."
       placeholder: "As a user, I want to be able to [...] so that I can [...]."
     validations:
       required: true
@@ -15,21 +15,76 @@ body:
     id: acceptance-criteria
     attributes:
       label: "Acceptance Criteria"
-      description: "Define the specific requirements for this feature to be considered complete. Include both 'Happy Path' and 'Unhappy Path' scenarios."
+      description: "Define the specific requirements for this feature to be considered complete. Use the 'Given-When-Then' format for clarity."
       value: |
         ### Happy Path:
-        1. 
-        2. 
+        **Scenario 1:** (A short, descriptive name for the scenario)
+        *   **Given:** (The initial state or context. e.g., "I have a remote tmux session in the active pane.")
+        *   **When:** (The action the user takes. e.g., "I use my mouse scroll wheel.")
+        *   **Then:** (The expected outcome. e.g., "The content in the remote pane scrolls up without entering copy mode.")
 
         ### Unhappy Path Scenarios:
-        1. 
-        2. 
+        **Scenario 1:** (A short name for the failure case)
+        *   **Given:** (The initial state. e.g., "The remote tmux version is older than 2.9.")
+        *   **When:** (The user action. e.g., "I use my mouse scroll wheel.")
+        *   **Then:** (The expected failure behavior. e.g., "The scroll feature gracefully degrades and a warning is logged.")
     validations:
       required: true
-  - type: textarea
-    id: rationale
+  
+  - type: markdown
     attributes:
-      label: "Rationale / Why should we build this?"
-      description: "Explain why this feature is valuable. How does it align with the project's vision? Which user personas does it serve (e.g., Cameron the Veteran, Alex the Modern Dev, Jamie the Beginner Dev)?"
+      value: "---"
+
+  - type: markdown
+    attributes:
+      value: "## 👑 Product & Priority"
+
+  - type: dropdown
+    id: user-value
+    attributes:
+      label: "User Value"
+      description: "How much pain does this solve for our users (Cameron, Alex, Jamie)?"
+      options:
+        - "10 - Critical (Solves a major, daily frustration for all personas)"
+        - "8 - High (Solves a significant problem for our core personas)"
+        - "5 - Medium (A great quality-of-life improvement)"
+        - "3 - Low (A nice-to-have, but not a game-changer)"
+        - "1 - Minimal (Serves a very niche use case)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: market-opportunity
+    attributes:
+      label: "Strategic Impact"
+      description: "Does this help us beat tmux, create a unique selling point, or fix a major brand weakness?"
+      options:
+        - "10 - Game-Changer (Creates a new, defensible 'moat' for the project)"
+        - "8 - Strong Differentiator (A clear, major advantage over competitors)"
+        - "5 - Parity Feature (Closes a gap with a competitor)"
+        - "3 - Foundational (Doesn't differentiate, but its absence makes us look unprofessional)"
+        - "1 - Minimal (No significant impact on our market position)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: development-effort
+    attributes:
+      label: "Development Effort"
+      description: "Estimate the complexity and time required to implement this feature."
+      options:
+        - "0.5 - Trivial (A few hours)"
+        - "1.0 - Small (A day or two)"
+        - "2.0 - Medium (About a week)"
+        - "3.0 - Large (A few weeks)"
+        - "5.0 - Epic (A month or more)"
+    validations:
+      required: true
+      
+  - type: input
+    id: wsjf-score
+    attributes:
+      label: "WSJF Score (Calculated)"
+      description: "Calculate as (User Value + Strategic Impact) / Development Effort. Example: (8 + 5) / 2 = 6.5"
     validations:
       required: true

@@ -1,7 +1,7 @@
 name: "🐛 Bug Report"
 description: "Report a bug or unexpected behavior in the Vesper application."
 title: "[BUG]: "
-labels: ["bug"]
+labels: ["bug", "needs-triage"]
 body:
   - type: textarea
     id: bug-description
@@ -40,5 +40,17 @@ body:
     attributes:
       label: "Operating System"
       description: "e.g., Ubuntu 22.04, macOS Sonoma 14.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: "Severity"
+      description: "How severe is this bug? This helps us prioritize."
+      options:
+        - "S1 - Blocker: A crash, data loss, or a feature is completely unusable."
+        - "S2 - Major: A major feature is not working as expected, but there is a workaround."
+        - "S3 - Minor: An unexpected behavior or cosmetic issue that doesn't prevent functionality."
+        - "S4 - Trivial: A typo or a minor annoyance."
     validations:
       required: true
