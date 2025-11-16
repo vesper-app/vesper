@@ -15,13 +15,19 @@ body:
     id: acceptance-criteria
     attributes:
       label: "Acceptance Criteria"
-      description: "Define the specific requirements for this feature to be considered complete. Include both 'Happy Path' and 'Unhappy Path' scenarios."
+      description: "Define the specific requirements for this feature to be considered complete. Use the 'Given-When-Then' format for clarity."
       value: |
         ### Happy Path:
-        1. 
-        
+        **Scenario 1:** (A short, descriptive name for the scenario)
+        *   **Given:** (The initial state or context. e.g., "I have a remote tmux session in the active pane.")
+        *   **When:** (The action the user takes. e.g., "I use my mouse scroll wheel.")
+        *   **Then:** (The expected outcome. e.g., "The content in the remote pane scrolls up without entering copy mode.")
+
         ### Unhappy Path Scenarios:
-        1. 
+        **Scenario 1:** (A short name for the failure case)
+        *   **Given:** (The initial state. e.g., "The remote tmux version is older than 2.9.")
+        *   **When:** (The user action. e.g., "I use my mouse scroll wheel.")
+        *   **Then:** (The expected failure behavior. e.g., "The scroll feature gracefully degrades and a warning is logged.")
     validations:
       required: true
   
